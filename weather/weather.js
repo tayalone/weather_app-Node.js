@@ -1,5 +1,5 @@
 const request = require('request')
-const Key =require('../conifg/key')
+const Key =require('../config/key')
 
 const getWeather = (lat, long, callback) => {
     const forcast = `https://api.darksky.net/forecast/${Key.foreCastKey}/${lat},${long}`

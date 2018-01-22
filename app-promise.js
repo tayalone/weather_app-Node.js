@@ -1,7 +1,7 @@
 const yargs = require('yargs')
 const axios = require('axios')
 
-const Key =require('./conifg/key')
+const Key =require('./config/key')
 
 const argv = yargs
     .options({
