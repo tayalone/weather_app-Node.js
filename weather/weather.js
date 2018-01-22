@@ -1,14 +1,15 @@
 const request = require('request')
+const Key =require('../conifg/key')
 
 const getWeather = (lat, long, callback) => {
-    
-    const forcast = `https://api.darksky.net/forecast/ad3d8afd047de8e016955df585f28c2f/${lat},${long}`
+    const forcast = `https://api.darksky.net/forecast/${Key.foreCastKey}/${lat},${long}`
+    //console.log(forcast)
     request({
         url: forcast,
         json: true
     }, (error, response, body) => {
         if (error){
-            // console.log(`Unable connect`)
+            //console.log(`Unable connect`)
             callback(`Unable connect`)
         } 
         else if (response.statusCode  === 400) {

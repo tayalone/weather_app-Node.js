@@ -16,9 +16,7 @@ const argv = yargs
     .alias('help', 'h')
     .argv
 
-console.log(argv.address)
-// address=%20chumsaeng%20nakhonsawan
-
+// console.log(argv.address)
 geocode.geoAddress(argv.address, (error, results) => {
     if (error) {
         console.log(error)

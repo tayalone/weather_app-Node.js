@@ -1,6 +1,8 @@
 const yargs = require('yargs')
 const axios = require('axios')
 
+const Key =require('./conifg/key')
+
 const argv = yargs
     .options({
         a : {
@@ -26,7 +28,7 @@ axios.get(geocodeUrl)
         const lat = response.data.results[0].geometry.location.lat
         const lng = response.data.results[0].geometry.location.lng
         console.log(address)
-        const forcast = `https://api.darksky.net/forecast/ad3d8afd047de8e016955df585f28c2f/${lat},${lng}`
+        const forcast = `https://api.darksky.net/forecast/${Key.foreCastKey}/${lat},${lng}`
         return axios.get(forcast)
     })
     .then((response) => {
