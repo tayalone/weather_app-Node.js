@@ -30,7 +30,7 @@ geocode.geoAddress(argv.address, (error, results) => {
                 console.log(error)
             } else {
                 //console.log(JSON.stringify(results, undefined, 2))
-                console.log(`It's currently ${results.temperature} but it feel like ${results.apparentTemperature}`)
+                console.log(`It's currently ${results.temperature} but it feel like ${results.apparentTemperaturegit}`)
             }
         })
     }
